@@ -1,4 +1,4 @@
-# Laravel Users REST API with Sanctum
+# Laravel Users REST API with Sanctum and Tailwind Css
 
 - Steps
 
@@ -14,13 +14,9 @@ DB_PORT=3306 -->
 - Run __php artisan key:generate__
 - Run __php artisan migrate --seed__ (it has some seeded data)
 
-
+- Run __npm i && npm run dev__ to install node modules and build assets
 - Create a _database.sqlite_ file in the _database_ directory
 
 - Run __php artisan serve__
 
 # Run the webserver on port 8000
-
-
-
-## Routes

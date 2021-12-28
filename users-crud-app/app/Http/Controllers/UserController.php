@@ -17,17 +17,32 @@ class UserController extends Controller
         return User::all();
     }
 
+    public function web_index()
+    {
+        $users = User::latest()->paginate(20);
+
+        return view('users.index', [
+            'users' => $users
+        ]);
+    } 
+
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function findUser($id)
     {
         return User::find($id);
     }
 
+    public function show(User $user)
+    {
+        return view('users.show', [
+            'user' => $user
+        ]);
+    }
     /**
      * Update the specified resource in storage.
      *
