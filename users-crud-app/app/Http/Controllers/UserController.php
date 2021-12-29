@@ -32,12 +32,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function findUser($id)
+    public function show($id)
     {
         return User::find($id);
     }
 
-    public function show(User $user)
+    public function findUser(User $user)
     {
         return view('users.show', [
             'user' => $user

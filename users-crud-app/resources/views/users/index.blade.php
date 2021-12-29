@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="flex justify-center">
-    @auth
+
         <div class="w-8/12 bg-white p-6 rounded-lg">
 
             @if ($users->count())
@@ -15,6 +15,6 @@
                 <p>There are no users</p>
             @endif
         </div>
-    @endauth
+
     </div>
 @endsection

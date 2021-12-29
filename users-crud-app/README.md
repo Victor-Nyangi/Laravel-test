@@ -6,9 +6,9 @@
 
 - Using SQLite, replace the database details with the information below
 
-<!-- DB_CONNECTION=sqlite
+DB_CONNECTION=sqlite
 DB_HOST=127.0.0.1
-DB_PORT=3306 -->
+DB_PORT=3306
 
 - Run __composer install__
 - Run __php artisan key:generate__
@@ -20,3 +20,24 @@ DB_PORT=3306 -->
 - Run __php artisan serve__
 
 # Run the webserver on port 8000
+
+## Routes
+
+```
+# Public
+
+POST   /api/login
+@body: email, password
+
+POST   /api/register
+@body: name, email, ,phone_number, password, password_confirmation
+
+
+# Protected
+
+GET   /api/users
+
+GET /api/user/:id
+
+POST    /api/logout
+```

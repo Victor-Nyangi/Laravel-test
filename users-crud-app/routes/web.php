@@ -31,4 +31,4 @@ Route::get('/register', [AuthController::class, 'web_register'])->name('register
 Route::post('/register', [AuthController::class, 'user_register']);
 
 Route::get('/users', [UserController::class, 'web_index'])->name('users');
-// Route::get('/users/{user}', [UserController::class, 'show'])->name('users.show');
+Route::get('/users/{user}', [UserController::class, 'findUser'])->name('users.show');

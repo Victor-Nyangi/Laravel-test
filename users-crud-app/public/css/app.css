@@ -412,6 +412,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .flex {
   display: flex;
 }
+.table {
+  display: table;
+}
 .w-8\/12 {
   width: 66.666667%;
 }
